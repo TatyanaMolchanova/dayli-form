@@ -1,0 +1,90 @@
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@import 'normalize';
+@import 'mixin';
+
+$white: #fff;
+$raspberry: #ea355a;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font: 10px/1.6 Arial, sans-serif;
+	height: 100%;
+}
+
+body {
+	font-size: 1.3rem;
+	color: #7a7b7f;
+	min-height: 100%;
+	background-image: linear-gradient(to top right, #ff512f, #dd2476);
+}
+
+.form {
+	max-width: 460px;
+	width: 98%;
+	@include posCenter();
+	background-color: $white;
+	padding: 30px;
+	border-radius: 5px;
+	&__wrap {
+		display: flex;
+	    align-items: center;
+	    margin-bottom: -20px;
+	    overflow: hidden;
+	}
+	&__key {
+		margin-right: 10px;
+	}
+	&__title {
+		font-size: 2.4rem;
+	}
+	&__field {
+		width: 100%;
+		background-color: #f0f0f0;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: none;
+		font-size: 1.4rem;
+		border-radius: 5px;
+		&--sm {
+			width: calc(100%/2 - 7px);
+			&:first-child {
+				float: right;
+			}
+		}
+	}
+	&__btn {
+		width: 100%;
+	    background-color: $raspberry;
+	    border: none;
+	    padding: 15px;
+	    border-radius: 5px;
+	    color: $white;
+	    font-weight: 700;
+	    font-size: 1.8rem;
+	    border: 2px solid $raspberry;
+	    @include hover() {
+			background-color: $white;
+			color: $raspberry;
+		}
+	}
+	&__body {
+		padding-top: 20px;
+	}
+	&__foot {
+		padding: 10px 0;
+	}
+	&__terms {
+		font-size: 1.2rem;
+	}
+	&__link {
+		color: $raspberry;
+		text-decoration: none;
+		@include hover() {
+			text-decoration: underline;
+		}
+	}
+}
